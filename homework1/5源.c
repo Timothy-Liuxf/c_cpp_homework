@@ -1,9 +1,9 @@
 #pragma warning(disable:4996)
 #include<stdio.h>
-int Main() {
+int main() {
 	char ifrun = 0 ;
 	int year, month;
-	printf("Please inout the year and the month.\n");
+	printf("Please input the year and the month.\n");
 	scanf("%d%d", &year, &month);
 	if (year % 100 && year % 4 == 0 || year % 400 == 0) ifrun = 1;
 	switch (month) {

@@ -12,7 +12,7 @@ int main() {
 	for (int i = 0; i < month; ++i) days += a[i];
 	days += day;
 	int k = (days - 1) % 5;
-	if (k < 3) printf("´òÓã\n");
-	else printf("É¹Íø\n");
+	if (k < 3) printf("ï¿½ï¿½ï¿½ï¿½\n");
+	else printf("É¹ï¿½ï¿½\n");
 	return 0;
-}*/
+}*/ 
