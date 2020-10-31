@@ -6,10 +6,10 @@ class Pascal
 private:
 	int** triangle;
 	int _row;
-	static ostream& itv(ostream& o) { return o << "    "; };	//¼ä¸ô
-	static ostream& half_itv(ostream& o) { return o << "  "; }	//°ë¸ö¼ä¸ô
-	static ostream& blk(ostream& o) { return o << "    "; }	//Ã¿¸öÊý×ÖÕ¼Î»
-	static ostream& half_blk(ostream& o) { return o << "  "; }	//°ë¸öÊý×ÖÕ¼Î»
+	static ostream& itv(ostream& o) { return o << "    "; };	//ï¿½ï¿½ï¿½
+	static ostream& half_itv(ostream& o) { return o << "  "; }	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	static ostream& blk(ostream& o) { return o << "    "; }	//Ã¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¼Î»
+	static ostream& half_blk(ostream& o) { return o << "  "; }	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¼Î»
 public:
 	Pascal(int row);
 	void print();

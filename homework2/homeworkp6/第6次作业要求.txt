@@ -1,0 +1,13 @@
+第6次作业
+1.	定义一个字符串类String，其私有成员为一个字符指针str。设计带缺省值的构造函数、复制构造函数、析构函数、设置新值函数Set、打印成员值函数Print。借助此String类，将操作符 + 和 = 重载函数设置为String类的成员函数，实现对操作符 + 和 = 的重载，使之能直接把两个String类类型的字符串进行串接并赋值。请设计各种情况调用此 + 和 = 重载操作符，操作符函数形参可以用引用方式，以提高执行效率。例如：
+String s1("abcd"), s2("efghij"), s3("lmnop"), s4, s5;
+s4 = s1+s2+s3;  s4.Print( );  // 输出结果应该是 abcdefghijlmnop
+s5 = s5+s3+s4;  s5.Print( );  // 输出结果应该是 lmnopabcdefghijlmnop
+
+2.	String类的定义同上题。借助此String类，将操作符 += 重载函数设置为String类的成员函数，实现对操作符 += 的重载，使 s1 += s2; 能直接把一个String类类型的字符串s2串接在另一个String类类型的字符串s1尾上，类似strcat(s1,s2); 的功能，写 += 操作符重载函数时需考虑各种极端情况。请设计各种情况调用此 += 重载操作符, 操作符函数形参可以用引用方式，以提高执行效率。例如：
+String s1("abcd"), s2("efghij"), s3("lmnop");
+s1 += s2;   s1.Print( );    // 输出结果应该是 abcdefghij
+s3 += s3 += s2;   s3.Print( ); // 输出结果应该是 lmnopefghijlmnopefghij
+
+3*. 将第1题中的+操作符重载函数设置为String类的友元函数，重写程序。 
+
