@@ -1,57 +1,80 @@
-/*#pragma warning (disable:4996)
+/*#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-typedef struct student {
-	int num;
-	char name[10];
-	int grade;
-} STU;
-typedef struct stunode {
-	int num;
-	char name[10];
-	int grade;
-	struct stunode* next;
-} STUNODE;
-typedef STUNODE* LPSTUNODE;
 
-int main()
+typedef struct student
 {
-	int tmp;
-	STU st[13];
-	LPSTUNODE p = NULL, q = NULL, head = NULL;
-	for (int i = 0; i < 13; ++i) {
-		scanf("%d%s%d", &st[i].num, st[i].name, &st[i].grade);
+	int num;
+	char name[10];
+	int grade;
+} Student;
+
+typedef struct stunode
+{
+	int num;
+	char name[10];
+	int grade;
+	struct stunode *next;
+} StuNode, *PStuNode;
+
+#define STU_NUM 13
+
+int mainc(void)
+{
+	Student stu[STU_NUM];
+	PStuNode head = NULL, p;
+	int i;
+	for (i = 0; i < STU_NUM; ++i)
+	{
+		scanf("%d%s%d", &stu[i].num, stu[i].name, &stu[i].grade);
 	}
 
 	//Build the list
 
-	for (int i = 0; i < 13; ++i) {
-		p = (LPSTUNODE)malloc(sizeof(STUNODE));
-		if (!head) head = p;
-		else q->next = p;
-		p->next = NULL;
-		p->num = st[i].num;
-		p->grade = st[i].num;
-		strcpy(p->name, st[i].name);
-		q = p;
+	for (i = STU_NUM - 1; i >= 0; --i)
+	{
+		p = (PStuNode)malloc(sizeof(StuNode));
+
+		if (p == NULL)
+		{
+			perror("Memory allocation failed!\n");
+			exit(1);
+		}
+
+		p->num = stu[i].num;
+		p->grade = stu[i].grade;
+		strcpy(p->name, stu[i].name);
+
+		//As the question requests, insert the new node to the **head** of the list, **not the tail**!!!!!!
+
+		if (head == NULL)
+		{
+			head = p;
+			p->next = NULL;
+		}
+		else
+		{
+			p->next = head;
+			head = p;
+		}
 	}
 
-	//Output and delete list
+	//Output the students and delete the list
 
-	
 	printf("\n========================\n\n");
 	printf("num      name     grade\n\n");
-	while (head) {
+	while (head)
+	{
 		p = head->next;
-		printf(" %02d", head->num);
-		tmp = 10 - strlen(head->name);
-		for (int i = 0; i < tmp; ++i) {
-			printf(" ");
-		}
-		printf("%s     %5d\n", head->name, head->grade);
+		printf(" %02d%10s%10d\n", head->num, head->name, head->grade);
 		free(head);
 		head = p;
 	}
+
+	
 	return 0;
-}*/
+}
+
+#undef STU_NUM
+*/
