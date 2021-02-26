@@ -9,7 +9,7 @@ char number[10][3] = { "零", "一", "二", "三", "四" , "五" , "六" , "七" , "八" 
 char loword[4][3] = { "个", "十", "百", "千" };
 char highword[13][3] = { "个", "万", "亿", "兆", "京", "垓", "秭", "穰", "沟", "涧", "正", "载", "极" };
 #define MAX_NUM 52
-inline long changeToNum(char* p)	//将双字节字符转换成ANSI码值
+static inline long changeToNum(char* p)	//将双字节字符转换成ANSI码值
 {
 	return (unsigned char)p[0] * 0x100L + (unsigned char)p[1];
 }
