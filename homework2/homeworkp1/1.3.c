@@ -1,8 +1,8 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>
 //#include <stdint.h>
 #include <stdlib.h>
-#pragma warning(disable:4996)
 char input[20000] = { 0 };
 char output[20000];
 char number[10][3] = { "零", "一", "二", "三", "四" , "五" , "六" , "七" , "八" , "九" };
