@@ -3,7 +3,7 @@
 //#include <string.h>
 //#pragma warning(disable:4996)
 //typedef unsigned char UCHAR;
-//inline UCHAR rev(UCHAR x)	/*反转*/
+//static inline UCHAR rev(UCHAR x)	/*反转*/
 //{
 //	x = (((x & 0x0f) << 4) | ((x & 0xf0) >> 4));	/*相邻四位反转*/
 //	x = (((x & 0x33) << 2) | ((x & 0xcc) >> 2));	/*相邻两位反转*/
