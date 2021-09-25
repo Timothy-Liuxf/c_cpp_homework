@@ -2,7 +2,7 @@
 #include<stdio.h>
 #include<math.h>
 int main() {
-	double x, sumOfPositive = 0.0 , sumOfNegative = 0.0 , sumOfAbs = 0.0 ;
+	double x, sumOfPositive = 0.0, sumOfNegative = 0.0, sumOfAbs = 0.0;
 	int numOfPositive = 0, numOfNegative = 0;
 	for (int i = 0; i < 30; ++i) {
 		scanf("%lf", &x);

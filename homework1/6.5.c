@@ -6,7 +6,8 @@ int isPrime(int n)
 {
 	for (int i = 2; i * i <= n; ++i)
 	{
-		if (n % i == 0) return 0;
+		if (n % i == 0)
+			return 0;
 	}
 	return 1;
 }
@@ -42,7 +43,7 @@ int main()
 		}
 	}
 	putchar('\n');
-	
+
 	printf("ËØÊýÖ®ºÍ:%d\n", sumOfPrime);
 	return 0;
 }

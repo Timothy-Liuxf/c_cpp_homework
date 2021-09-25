@@ -1,4 +1,4 @@
-/*#pragma warning(disable: 4996) 
+#pragma warning(disable: 4996) 
 #include <stdio.h>
 double p(int n) {
 	if (n == 0) return 1;
@@ -10,4 +10,4 @@ int main() {
 	double A = p(m) / p(m - n);
 	printf("%lf", A);
 	return 0;
-}*/
+}
